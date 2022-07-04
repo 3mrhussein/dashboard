@@ -6,7 +6,7 @@ const NavbarButton = ({ Icon, OnClick, Content, Shadow, Unread }) => {
   const {
     theme: { themeColor },
   } = useContext(ThemeContext);
-  const buttonClasses = `items-center text-2xl hover:bg-light-gray  dark:hover:bg-white p-3 rounded-full`;
+  const buttonClasses = `relative items-center text-2xl hover:bg-light-gray  dark:hover:bg-white p-3 rounded-full`;
 
   const UnreadMark = (
     <div className="absolute rounded-full bg-green-600 right-2 top-2 w-2 h-2" />

@@ -5,11 +5,18 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Ecommerce, Navbar, Settings, Sidebar } from './components';
 import { ThemeContext } from './context/theme.context';
-import { SidebarContext } from './context/sidebar.context';
+import { TabsContext } from './context/tabs.context';
 const App = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const { showSidebar } = useContext(SidebarContext);
-
+  const [settingsEffect, setSettingsEffect] = useState(false);
+  const { theme } = useContext(ThemeContext);
+  const { showSidebar, setShowSettings, showSettings } =
+    useContext(TabsContext);
+  const toggleSettings = (e) => {
+    setSettingsEffect(false);
+    e.preventDefault();
+    setSettingsEffect(true);
+    setShowSettings(!showSettings);
+  };
   useEffect(() => {
     if (theme?.themeOption === 'dark') {
       document.documentElement.classList.add('dark');
@@ -26,15 +33,16 @@ const App = () => {
           <div className="fixed right-8  bottom-8 z-1000 ">
             <TooltipComponent content={'Settings'} position="Bottom-Left">
               <button
-                onClick={() =>
-                  setTheme({
-                    ...theme,
-                    themeOption: 'dark',
-                  })
-                }
+                onClick={toggleSettings}
                 type="button"
-                className="  text-white rounded-full text-3xl p-3 hover:bg-light-gray hover:shadow-md  shadow-gray-500"
-                style={{ backgroundColor: 'green' }}
+                className={`${
+                  settingsEffect && 'animate-spin-1'
+                } text-white  rounded-full text-3xl p-3 hover:bg-light-gray hover:shadow-md  shadow-gray-500`}
+                style={{ backgroundColor: theme.themeColor }}
+                onAnimationEnd={(e) => {
+                  e.preventDefault();
+                  setSettingsEffect(false);
+                }}
               >
                 <FiSettings />
               </button>
@@ -58,12 +66,14 @@ const App = () => {
             </div>
 
             {/* Settings Menu */}
-            <div
-              className="fixed w-80 h-3/4  right-0 shadow-md z-1000 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
-              style={{ bottom: '90px' }}
-            >
-              <Settings />
-            </div>
+            {showSettings && (
+              <div
+                className=" absolute  w-72 h-3/4 md:animate-slide-top  right-0 shadow-md rounded-2xl z-1000 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
+                style={{ bottom: '15%' }}
+              >
+                <Settings />
+              </div>
+            )}
             <Routes>
               <Route exact path="/" element={<Ecommerce />} />
               <Route exact path="/ecommerce" element={<Ecommerce />} />

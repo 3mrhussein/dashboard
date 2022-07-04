@@ -3,9 +3,9 @@ import { SiShopware } from 'react-icons/si';
 import { links } from '../data/dummy';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { SidebarContext } from '../context/sidebar.context';
+import { TabsContext } from '../context/tabs.context';
 const Sidebar = () => {
-  const { showSidebar, setShowSidebar } = useContext(SidebarContext);
+  const { showSidebar, setShowSidebar } = useContext(TabsContext);
   const navigate = useNavigate();
   return (
     <div className="w-full relative overflow-y-scroll flex flex-col text-lg  text-gray-400 p-4 ">

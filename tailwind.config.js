@@ -1,8 +1,27 @@
+const { linear } = require('@syncfusion/ej2/charts');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{html,js,jsx}'],
   theme: {
+    screens: {
+      xs: '384px',
+      sm: '440px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     fontFamily: {
       display: ['Open Sans', 'sans-serf'],
       body: ['Open Sans', 'sans-serf'],
@@ -48,6 +67,27 @@ module.exports = {
       backgroundImage: {
         'hero-pattern':
           "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
+      },
+      animation: {
+        'spin-1': 'spin 0.2s linear',
+        'slide-top': 'slide-bottom-up 0.2s linear  ',
+        'bounce-once': 'bounceY 1s linear',
+      },
+
+      keyframes: {
+        'slide-bottom-up': {
+          '0%': { transform: 'translateY(-400px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        bounceY: {
+          '0%': { transform: 'translateY(-50px)' },
+
+          '10%': { transform: 'translateY(0)' },
+          '30%': { transform: 'translateY(-25px)' },
+          '70%': { transform: 'translateY(0)' },
+          '90%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
     },
   },
