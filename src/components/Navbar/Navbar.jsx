@@ -4,9 +4,10 @@ import { FiSearch, FiShoppingCart, FiMessageSquare } from 'react-icons/fi';
 import { RiNotification3Line } from 'react-icons/ri';
 import { TabsContext } from '../../context/tabs.context';
 import NavbarUserDropdown from './NavbarUserDropdown';
-import NavbarButton from './NavbarButton';
+import { NavbarButton } from './NavbarCommons';
 import NavbarUser from './NavbarUser';
-const Navbar = ({ darkTextColor }) => {
+import NavbarNotificationsTab from './NavbarNotificationsTab';
+const Navbar = () => {
   const { showSidebar, setShowSidebar, displayedTab, setDisplayedTab } =
     useContext(TabsContext);
   const toggleSidebar = (e) => {
@@ -43,11 +44,16 @@ const Navbar = ({ darkTextColor }) => {
           Shadow
         />
         <NavbarButton
-          Content="Notification"
+          Content="Notifications"
           Icon={RiNotification3Line}
           Unread
           Shadow
+          OnClick={handleTabs}
         />
+        {displayedTab === 'notifications' && (
+          <NavbarNotificationsTab handleTabs={handleTabs} />
+        )}
+
         {/* Drop Down User Button */}
         <NavbarUser handleTabs={handleTabs} />
         {displayedTab === 'user' && (

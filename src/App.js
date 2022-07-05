@@ -30,7 +30,7 @@ const App = () => {
         <div className="  dark:bg-main-dark-bg  flex">
           {/* Tools Button */}
 
-          <div className="fixed right-8  bottom-8 z-1000 ">
+          <div className="fixed right-8  bottom-8 z-40 ">
             <TooltipComponent content={'Settings'} position="Bottom-Left">
               <button
                 onClick={toggleSettings}
