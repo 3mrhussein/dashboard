@@ -69,13 +69,13 @@ module.exports = {
           "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
       },
       animation: {
-        'spin-1': 'spin 0.2s linear',
-        'slide-top': 'slide-bottom-up 0.2s linear  ',
+        'spin-1': 'spin 0.4s linear',
+        'slide-bottom-up': 'slide-bottom 0.4s linear ',
         'bounce-once': 'bounceY 1s linear',
       },
 
       keyframes: {
-        'slide-bottom-up': {
+        'slide-bottom': {
           '0%': { transform: 'translateY(-400px)' },
           '100%': { transform: 'translateY(0)' },
         },

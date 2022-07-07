@@ -23,7 +23,7 @@ const Settings = () => {
   const sectionDivClassName = `border-b-2 p-4 flex flex-col justify-start items-start`;
   return (
     <div
-      className="flex flex-col w-full h-full pl-6"
+      className="flex flex-col w-full h-full pl-6 "
       style={{ color: theme.themeColor }}
     >
       <div className="flex justify-between items-center border-b-2 p-6">

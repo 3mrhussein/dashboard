@@ -25,9 +25,9 @@ const App = () => {
     }
   }, [theme]);
   return (
-    <div className=" w-full bg-main-bg dark:bg-main-dark-bg">
+    <div className=" w-full h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
       <BrowserRouter>
-        <div className="  dark:bg-main-dark-bg  flex">
+        <div className="  dark:bg-main-dark-bg h-full flex">
           {/* Tools Button */}
 
           <div className="fixed right-8  bottom-8 z-40 ">
@@ -58,26 +58,26 @@ const App = () => {
 
           {/* Body */}
 
-          <div className=" relative h-screen w-full">
+          <div className="flex flex-col w-full">
             {/* Navbar */}
 
-            <div className="w-full">
-              <Navbar />
-            </div>
+            <Navbar />
 
             {/* Settings Menu */}
             {showSettings && (
               <div
-                className=" absolute  w-72 h-3/4 md:animate-slide-top  right-0 shadow-md rounded-2xl z-1000 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
+                className=" absolute  w-72 h-3/4 animate-slide-bottom-up  right-0 shadow-md rounded-2xl z-40 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
                 style={{ bottom: '15%' }}
               >
                 <Settings />
               </div>
             )}
-            <Routes>
-              <Route exact path="/" element={<Ecommerce />} />
-              <Route exact path="/ecommerce" element={<Ecommerce />} />
-            </Routes>
+            <div className=" h-full overflow-y-scroll">
+              <Routes>
+                <Route exact path="/" element={<Ecommerce />} />
+                <Route exact path="/ecommerce" element={<Ecommerce />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>

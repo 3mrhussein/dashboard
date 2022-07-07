@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import ProfileImage from '../../data/profile.jpg';
 import { BsCurrencyDollar, BsShield, BsListTask } from 'react-icons/bs';
 import { ThemeContext } from '../../context/theme.context';
-import { NavbarTabHeader, TabItem } from './NavbarCommons';
+import { NavbarTabHeader, TabDefaultClasses, TabItem } from './NavbarCommons';
 const buttonStyles = `flex gap-4 w-full p-4 items-center border-b-1 dark:border-gray-700  border-gray-200`;
 
-const NavbarUserDropdown = ({ handleTabs }) => {
+const UserTab = ({ handleTabs }) => {
   const { theme } = useContext(ThemeContext);
 
   const user = {
@@ -16,12 +16,8 @@ const NavbarUserDropdown = ({ handleTabs }) => {
   };
   return (
     <div
-      className={` w-screen
-       sm:w-96 top-16 bg-white  dark:text-gray-100
-       items-start text-start flex flex-col
-        dark:bg-secondary-dark-bg  shadow-sm
-       dark:shadow-gray-700 md:right-8 z-50 absolute rounded-lg p-6
-       text-black
+      className={`${TabDefaultClasses} 
+       sm:w-96 top-16  md:right-8 z-50 
     `}
     >
       <NavbarTabHeader
@@ -50,20 +46,20 @@ const NavbarUserDropdown = ({ handleTabs }) => {
           Header="My Profile"
           Text="Account Settings"
           Icon={BsCurrencyDollar}
-          extraStyles="bg-light-gray text-blue-400 rounded-lg"
+          extraStyles="bg-light-gray text-blue-400 "
         />
         <TabItem
           Header="My Inbox"
           Text="Messages & Emails"
           Icon={BsShield}
-          extraStyles="bg-light-gray text-green-400 rounded-lg"
+          extraStyles="bg-light-gray text-green-400 "
         />
 
         <TabItem
           Header="My Tasks"
           Text="To-do & Daily Tasks"
           Icon={BsListTask}
-          extraStyles="bg-yellow-400 text-white rounded-lg"
+          extraStyles="bg-yellow-400 text-white "
         />
         <button
           className="w-full hover:shadow-lg text-white p-3 rounded-lg mt-4"
@@ -76,4 +72,4 @@ const NavbarUserDropdown = ({ handleTabs }) => {
   );
 };
 
-export default NavbarUserDropdown;
+export default UserTab;
