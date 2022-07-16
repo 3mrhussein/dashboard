@@ -24,6 +24,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-thumb {
+  scrollbar-color: rgb(216, 216, 216);
   background-color: rgb(216, 216, 216);
   border-radius: 40px;
 }
@@ -45,7 +46,7 @@
   background-color: #008000;
 } */
 
-/* .e-input-group:not(.e-float-icon-left),
+.e-input-group:not(.e-float-icon-left),
 .e-input-group.e-success:not(.e-float-icon-left),
 .e-input-group.e-warning:not(.e-float-icon-left),
 .e-input-group.e-error:not(.e-float-icon-left),
@@ -54,4 +55,4 @@
 .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left),
 .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
   border: none;
-} */
+}

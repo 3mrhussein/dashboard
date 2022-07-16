@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import ProfileImage from '../../data/profile.jpg';
 import { BsCurrencyDollar, BsShield, BsListTask } from 'react-icons/bs';
 import { ThemeContext } from '../../context/theme.context';
-import { NavbarTabHeader, TabDefaultClasses, TabItem } from './NavbarCommons';
+import { NavbarTabHeader, TabDefaultClasses } from './NavbarCommons';
+import { TabItem } from '../Commons';
+
 const buttonStyles = `flex gap-4 w-full p-4 items-center border-b-1 dark:border-gray-700  border-gray-200`;
 
 const UserTab = ({ handleTabs }) => {
@@ -45,20 +47,20 @@ const UserTab = ({ handleTabs }) => {
         <TabItem
           Header="My Profile"
           Text="Account Settings"
-          Icon={BsCurrencyDollar}
+          Icon={<BsCurrencyDollar />}
           extraStyles="bg-light-gray text-blue-400 "
         />
         <TabItem
           Header="My Inbox"
           Text="Messages & Emails"
-          Icon={BsShield}
+          Icon={<BsShield />}
           extraStyles="bg-light-gray text-green-400 "
         />
 
         <TabItem
           Header="My Tasks"
           Text="To-do & Daily Tasks"
-          Icon={BsListTask}
+          Icon={<BsListTask />}
           extraStyles="bg-yellow-400 text-white "
         />
         <button

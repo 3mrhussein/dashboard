@@ -602,52 +602,41 @@ export const links = [
   },
 ];
 
-export const cartData = {
-  subTotal: 1980,
-  total: 1980,
-  items: [
-    {
-      id: 15,
-      item: {
-        image: product5,
-        name: 'butterscotch ice-cream',
-        category: 'Milk product',
-        price: 250,
-        quantity: 1,
-      },
-    },
-    {
-      id: 12,
-      item: {
-        image: product6,
-        name: 'Supreme fresh tomato',
-        category: 'Vegetable Item',
-        price: 450,
-        quantity: 3,
-      },
-    },
-    {
-      id: 10,
-      item: {
-        image: product7,
-        name: 'Red color candy',
-        category: 'Food Item',
-        price: 190,
-        quantity: 0,
-      },
-    },
-    {
-      id: 4,
-      item: {
-        image: product7,
-        name: 'Red color candy',
-        category: 'Food Item',
-        price: 190,
-        quantity: 2,
-      },
-    },
-  ],
-};
+export const cartData = [
+  {
+    id: 15,
+    image: product5,
+    name: 'butterscotch ice-cream',
+    category: 'Milk product',
+    price: 250,
+    quantity: 1,
+  },
+  {
+    id: 12,
+
+    image: product6,
+    name: 'Supreme fresh tomato',
+    category: 'Vegetable Item',
+    price: 450,
+    quantity: 3,
+  },
+  {
+    id: 10,
+    image: product7,
+    name: 'Red color candy',
+    category: 'Food Item',
+    price: 190,
+    quantity: 0,
+  },
+  {
+    id: 4,
+    image: product7,
+    name: 'Red color candy',
+    category: 'Food Item',
+    price: 190,
+    quantity: 2,
+  },
+];
 export const notifications = [
   {
     user: {

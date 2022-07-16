@@ -11,12 +11,14 @@ const Settings = () => {
     e.preventDefault();
     if (theme.themeOption !== e.currentTarget.value) {
       setTheme({ ...theme, themeOption: e.currentTarget.value });
+      window.localStorage.setItem('mode', e.currentTarget.value);
     }
   };
   const handleChangeThemeColor = (e) => {
     e.preventDefault();
     if (theme.themeColor !== e.target.value) {
       setTheme({ ...theme, themeColor: e.target.value });
+      window.localStorage.setItem('color', e.target.value);
     }
   };
   const optionClassName = ` p-2 gap-2 flex text-base items-center`;
@@ -36,6 +38,7 @@ const Settings = () => {
         </button>
       </div>
       {/* Theme Mode */}
+
       <div className={`${sectionDivClassName}`}>
         <h2 className="text-xl font-bold py-4">Theme Option</h2>
         <button

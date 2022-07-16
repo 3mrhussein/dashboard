@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FiSearch, FiShoppingCart, FiMessageSquare } from 'react-icons/fi';
-import { RiNotification3Line } from 'react-icons/ri';
+import { RiArrowGoBackFill, RiNotification3Line } from 'react-icons/ri';
 import { TabsContext } from '../../context/tabs.context';
 import UserTab from './UserTab';
 import { NavbarButton } from './NavbarCommons';
@@ -30,7 +30,10 @@ const Navbar = () => {
     theme: { themeOption, themeColor },
   } = useContext(ThemeContext);
   return (
-    <div className="flex relative w-full justify-between items-center md:px-6 py-2 ">
+    <div
+      className="flex relative w-full justify-between items-center md:px-6 py-1 rounded-md "
+      style={{ backgroundColor: `rgba(10,10,10,0.2)` }}
+    >
       {/* Left Part */}
       <div className="flex  justify-start items-center md:gap-2 ">
         <NavbarButton
@@ -62,6 +65,7 @@ const Navbar = () => {
           Shadow
           OnClick={handleTabs}
           Content="Messages"
+          Color="green"
         />
         {displayedTab === 'messages' && <MessagesTab handleTabs={handleTabs} />}
         <NavbarButton
@@ -70,6 +74,7 @@ const Navbar = () => {
           Unread
           Shadow
           OnClick={handleTabs}
+          Color="#1155cc"
         />
         {displayedTab === 'notifications' && (
           <NotificationsTab handleTabs={handleTabs} />

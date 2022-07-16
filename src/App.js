@@ -3,12 +3,14 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Ecommerce, Navbar, Settings, Sidebar } from './components';
+import { Navbar, Settings, Sidebar } from './components';
+import { Ecommerce } from './pages';
 import { ThemeContext } from './context/theme.context';
 import { TabsContext } from './context/tabs.context';
+import { SparklineComponent } from '@syncfusion/ej2-react-charts';
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
-  const { theme } = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
   const { showSidebar, setShowSettings, showSettings } =
     useContext(TabsContext);
   const toggleSettings = (e) => {
@@ -25,9 +27,9 @@ const App = () => {
     }
   }, [theme]);
   return (
-    <div className=" w-full h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
+    <div className=" w-screen  h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
       <BrowserRouter>
-        <div className="  dark:bg-main-dark-bg h-full flex">
+        <div className="  dark:bg-main-dark-bg h-full w-full flex">
           {/* Tools Button */}
 
           <div className="fixed right-8  bottom-8 z-40 ">
@@ -38,7 +40,7 @@ const App = () => {
                 className={`${
                   settingsEffect && 'animate-spin-1'
                 } text-white  rounded-full text-3xl p-3 hover:bg-light-gray hover:shadow-md  shadow-gray-500`}
-                style={{ backgroundColor: theme.themeColor }}
+                style={{ backgroundColor: theme?.themeColor }}
                 onAnimationEnd={(e) => {
                   e.preventDefault();
                   setSettingsEffect(false);
@@ -50,15 +52,19 @@ const App = () => {
           </div>
 
           {/* Sidebar  */}
-          {showSidebar ? (
-            <div className="  h-screen shadow-md min-w-72 min-w-72 shadow-gray-500 fixed md:static flex bg-white dark:bg-secondary-dark-bg  z-1000">
-              <Sidebar />
-            </div>
-          ) : null}
+
+          <div
+            className={`  h-screen shadow-md ${
+              showSidebar ? 'block' : 'hidden'
+            }   shadow-gray-500 fixed md:static flex bg-white dark:bg-secondary-dark-bg  z-1000`}
+            style={{ minWidth: '260px' }}
+          >
+            <Sidebar />
+          </div>
 
           {/* Body */}
 
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full overflow-x-hidden  ">
             {/* Navbar */}
 
             <Navbar />
@@ -66,17 +72,19 @@ const App = () => {
             {/* Settings Menu */}
             {showSettings && (
               <div
-                className=" absolute  w-72 h-3/4 animate-slide-bottom-up  right-0 shadow-md rounded-2xl z-40 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
+                className=" fixed  w-72 h-3/4 overflow-scroll animate-slide-bottom-up  right-0 shadow-md rounded-2xl z-40 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
                 style={{ bottom: '15%' }}
               >
                 <Settings />
               </div>
             )}
-            <div className=" h-full overflow-y-scroll">
-              <Routes>
-                <Route exact path="/" element={<Ecommerce />} />
-                <Route exact path="/ecommerce" element={<Ecommerce />} />
-              </Routes>
+            <div className="w-full overflow-y-scroll">
+              <div className="w-full  max-w-7xl pl-3 mx-auto py-10 overflow-x-hidden ">
+                <Routes>
+                  <Route exact path="/" element={<Ecommerce />} />
+                  <Route exact path="/ecommerce" element={<Ecommerce />} />
+                </Routes>
+              </div>
             </div>
           </div>
         </div>

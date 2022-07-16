@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 export const TabsContext = createContext(null);
 
 const TabsProvider = ({ children }) => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [displayedTab, setDisplayedTab] = useState('');
   return (

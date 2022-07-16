@@ -13,7 +13,7 @@ const Sidebar = () => {
     theme: { themeColor },
   } = useContext(ThemeContext);
   return (
-    <div className="w-full relative overflow-y-scroll flex flex-col text-lg  p-4 ">
+    <div className="w-full relative overflow-y-scroll flex flex-col text-lg pl-4 p-1 ">
       {/* Logo */}
       <div className="flex font-bold items-center p-2 text-2xl gap-4">
         <SiShopware />
@@ -41,7 +41,7 @@ const Sidebar = () => {
                   navigate(`/${link.name}`, { replace: 'true' });
                   setActive(link.name.toLowerCase());
                 }}
-                className="flex  text-base hover:bg-light-gray  dark:text-gray-200 dark:hover:text-gray-800 text-gray-800 items-center gap-3 w-full capitalize p-3 pl-7 my-3 rounded-lg"
+                className="flex  text-base hover:bg-light-gray  dark:text-gray-200 dark:hover:text-gray-800 text-gray-800 items-center gap-3 w-full capitalize p-2 pl-7 my-3 rounded-lg"
                 style={{
                   backgroundColor:
                     active === link.name.toLowerCase() && themeColor,

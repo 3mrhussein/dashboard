@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/theme.context';
 import { user1, user2, user3, user4 } from '../../data/dummy';
-import { NavbarTabHeader, TabDefaultClasses, TabItem } from './NavbarCommons';
+import { NavbarTabHeader, TabDefaultClasses } from './NavbarCommons';
+import { TabItem } from '../Commons';
+
 import { notifications } from '../../data/dummy';
 const NavbarNotificationsTab = ({ handleTabs }) => {
   const {

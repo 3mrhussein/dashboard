@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/theme.context';
 import { chatData } from '../../data/dummy';
-import { NavbarTabHeader, TabDefaultClasses, TabItem } from './NavbarCommons';
+import { NavbarTabHeader, TabDefaultClasses } from './NavbarCommons';
+import { TabItem } from '../Commons';
 
 const NavbarMessagesTab = ({ handleTabs }) => {
   const {
