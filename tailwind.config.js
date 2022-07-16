@@ -13,7 +13,7 @@ module.exports = {
       md: '768px',
       // => @media (min-width: 768px) { ... }
 
-      lg: '1024px',
+      lg: '950px',
       // => @media (min-width: 1024px) { ... }
 
       xl: '1280px',
@@ -34,7 +34,7 @@ module.exports = {
         1000: '1000',
       },
       backgroundColor: {
-        'main-bg': '#FAFBFB',
+        'main-bg': '#F8F8F8',
         'main-dark-bg': '#20232A',
         'secondary-dark-bg': '#33373E',
         'light-gray': '#F7F7F7',
@@ -47,23 +47,53 @@ module.exports = {
         color: 'rgba(0,0,0,0.1)',
       },
       width: {
+        300: '300px',
         400: '400px',
+        430: '430px',
+        700: '700px',
         760: '760px',
         780: '780px',
         800: '800px',
         1000: '1000px',
         1200: '1200px',
         1400: '1400px',
+        md: '24rem',
       },
       height: {
         80: '80px',
+        200: '200px',
+        210: '210px',
+        230: '230px',
+
+        250: '250px',
+        560: '560px',
         600: '600px',
       },
       minHeight: {
         590: '590px',
+        230: '230px',
+      },
+      maxHeight: {
+        590: '590px',
       },
       minWidth: {
         72: '18rem',
+        64: '16rem',
+        60: '15rem',
+        40: '10rem',
+        44: '11rem',
+        48: '12rem',
+        56: '14rem',
+        52: '12.5rem',
+        300: '300px',
+        400: '400px',
+        430: '430px',
+
+        700: '700px',
+        760: '760px',
+      },
+      maxWidth: {
+        160: '160px',
       },
       backgroundImage: {
         'hero-pattern':

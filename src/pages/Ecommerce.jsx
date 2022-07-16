@@ -189,7 +189,7 @@ const Ecommerce = () => {
 
       <div className="flex flex-col xl:flex-row flex-wrap gap-10 w-full justify-center items-center">
         {/* Recent Transaction */}
-        <Container className={' max-w-md h-600'}>
+        <Container className={'md h-600'}>
           <div className="flex w-full justify-between items-center ">
             <h1 className="font-semibold text-base sm:text-xl dark:text-gray-300">
               Recent Transactions
