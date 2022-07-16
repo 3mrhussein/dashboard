@@ -11,7 +11,7 @@ import { SparklineComponent } from '@syncfusion/ej2-react-charts';
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
-  const { showSidebar, setShowSettings, showSettings } =
+  const { showSidebar, setShowSettings, showSettings, setShowSidebar } =
     useContext(TabsContext);
   const toggleSettings = (e) => {
     setSettingsEffect(false);
@@ -26,6 +26,11 @@ const App = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setShowSidebar(false);
+    }
+  }, []);
   return (
     <div className=" w-screen  h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
       <BrowserRouter>

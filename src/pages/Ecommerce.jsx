@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/theme.context';
-import { BsCurrencyDollar } from 'react-icons/bs';
+import { BsCurrencyDollar, BsThreeDots } from 'react-icons/bs';
 import { EarningCard } from '../components/index';
+import { default as product9 } from '../data/product9.jpg';
 import {
   earningData,
   recentTransactions,
   lineCustomSeries,
+  weeklyStats,
+  SparklineAreaData,
+  notifications,
 } from '../data/dummy';
 import RevenueUpdates from '../components/Ecommerce/RevenueUpdates';
 import {
@@ -33,13 +37,14 @@ import {
 } from '@syncfusion/ej2-react-charts';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { Container, TabItem } from '../components/Commons';
+import { RiArrowGoBackFill } from 'react-icons/ri';
 
 const Ecommerce = () => {
   const {
     theme: { themeColor, themeOption },
   } = useContext(ThemeContext);
   return (
-    <div className="px-3 gap-10 flex flex-col w-full justify-center items-center">
+    <div className="px-3 gap-5 flex flex-col w-full justify-center items-center">
       <div className="flex flex-col lg:flex-row gap-5 w-full ">
         <Container
           className=" relative min-w-60 lg:w-3/12 h-40 flex-auto
@@ -75,7 +80,7 @@ const Ecommerce = () => {
           ))}
         </div>
       </div>
-      <div className="flex w-full flex-col xl:flex-row justify-center items-center gap-10">
+      <div className="flex w-full flex-col xl:flex-row justify-center items-center gap-5">
         {/* Revenue Updates */}
         <RevenueUpdates />
 
@@ -83,7 +88,7 @@ const Ecommerce = () => {
         <div className="flex flex-wrap gap-5 items-center justify-center xl:flex-col ">
           {/* Earnings */}
           <Container
-            className=" h-210 min-w-96  w-96"
+            className=" h-210 sm:min-w-96  sm:w-96 "
             style={{ backgroundColor: themeColor }}
           >
             <div className=" m-1 text-white text-2xl font-semibold flex  justify-between">
@@ -127,7 +132,7 @@ const Ecommerce = () => {
             </SparklineComponent>
           </Container>
           {/* Yearly sales */}
-          <Container className="flex h-210 min-w-96  w-96 ">
+          <Container className="flex h-210 sm:min-w-96  sm:w-96 ">
             <div className="flex flex-col w-fit justify-center items-center pl-5">
               <h1 className="font-semibold  text-2xl">$43,246</h1>
               <p className="text-gray-400 whitespace-nowrap">Yearly sales</p>
@@ -187,9 +192,9 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex flex-col xl:flex-row flex-wrap gap-10 w-full justify-center items-center">
+      <div className="flex flex-col xl:flex-row flex-wrap gap-5 w-full justify-center items-center">
         {/* Recent Transaction */}
-        <Container className={'md h-600'}>
+        <Container className={'max-w-md h-600'}>
           <div className="flex w-full justify-between items-center ">
             <h1 className="font-semibold text-base sm:text-xl dark:text-gray-300">
               Recent Transactions
@@ -224,7 +229,7 @@ const Ecommerce = () => {
           ))}
           <div className="p-3 flex justify-between">
             <button
-              className="p-3 rounded-lg"
+              className="p-3 rounded-lg text-white h-fit"
               style={{ backgroundColor: themeColor }}
             >
               Add
@@ -250,6 +255,8 @@ const Ecommerce = () => {
           </div>
           <ChartComponent
             legendSettings={{ background: 'white' }}
+            width="100%"
+            height="500px"
             background="transparent"
             primaryXAxis={{
               majorGridLines: { width: 0 },
@@ -295,6 +302,144 @@ const Ecommerce = () => {
               ))}
             </SeriesCollectionDirective>
           </ChartComponent>
+        </Container>
+      </div>
+
+      {/* Weekly Stats , Medicalpro Branding and Daily Activites */}
+      <div className="flex w-full gap-5 justify-center items-center flex-wrap">
+        {/* Weekly Stats */}
+        <Container className=" max-w-sm h-500">
+          <div className="flex justify-between mb-10">
+            <h1 className="font-semibold text-xl">Weekly Stats</h1>
+            <button className="text-xl">
+              <BsThreeDots />
+            </button>
+          </div>
+          {weeklyStats.map((item, index) => (
+            <div className="flex justify-between items-center ">
+              <TabItem
+                Icon={item.icon}
+                Header={item.title}
+                Text={item.desc}
+                BgColor={item.iconBg}
+                extraStyles={'rounded-full'}
+                hoverIcon
+              />
+              <span className={`text-xs font-semibold text-${item.pcColor}`}>
+                {item.amount}
+              </span>
+            </div>
+          ))}
+          <SparklineComponent
+            dataSource={SparklineAreaData}
+            xName="x"
+            yName="yval"
+            height="120px"
+            lineWidth={2}
+            opacity={0.3}
+            fill={themeColor}
+            border={{ color: themeColor, width: 2 }}
+            type="Area"
+            tooltipSettings={{
+              visible: true,
+              trackLineSettings: { visible: true },
+            }}
+            markerSettings={{ visible: ['All'], size: 3, fill: themeColor }}
+          >
+            <Inject services={[SparklineTooltip]} />
+          </SparklineComponent>
+        </Container>
+
+        {/* Medicalpro Brandings */}
+        <Container className=" max-w-sm h-500">
+          <div className="flex justify-between mb-10">
+            <h1 className="font-semibold text-xl">MedicalPro Branding</h1>
+            <button className="text-xl">
+              <BsThreeDots />
+            </button>
+          </div>
+          <button
+            type="button"
+            className="text-xs px-1  text-gray-300  bg-orange-500 rounded-md hover:shadow-lg"
+          >
+            16 ARP, 2021
+          </button>
+          <div className="flex mt-2 border-b-1 border-gray-300 divide-gray-400">
+            <div className="py-2 text-xs  border-gray-200 border-r-1 pr-5">
+              <p className="text-gray-300">Due date</p>
+              <p>Oct 23, 2021</p>
+            </div>
+            <div className="py-2 text-xs  border-gray-200 border-r-1 px-5">
+              <p className="text-gray-300">Budget</p>
+              <p>$98,500</p>
+            </div>
+            <div className="py-2 text-xs  border-gray-200 border-r-1 px-5">
+              <p className="text-gray-300">Expense</p>
+              <p>$63,000</p>
+            </div>
+          </div>
+          <h1 className="font-semibold text-base py-3">Teams</h1>
+
+          <div className="flex border-b-1 pb-4 border-gray-300 gap-5 divide-gray-400">
+            <button
+              type="button"
+              className="text-xs px-3  text-gray-100  bg-orange-400 rounded-md hover:shadow-lg"
+            >
+              Bootstrap
+            </button>
+            <button
+              type="button"
+              className="text-xs px-3  text-gray-100  bg-red-400 rounded-md hover:shadow-lg"
+            >
+              Angular
+            </button>
+          </div>
+          <h1 className="font-semibold text-base py-3">Leaders</h1>
+
+          <div className="flex border-b-1 pb-4 border-gray-300 gap-5 divide-gray-400">
+            {notifications.map((item) => (
+              <img
+                className="h-8 w-8 rounded-full"
+                src={item.user.proflieImg}
+              />
+            ))}
+          </div>
+          <div className="p-3 flex justify-between">
+            <button
+              className="px-3 py-2 text-white rounded-lg h-fit"
+              style={{ backgroundColor: themeColor }}
+            >
+              Add
+            </button>
+            <p className="text-gray-400 text-sm mt-2 mb-8">
+              36 Recent Transactions
+            </p>
+          </div>
+        </Container>
+        <Container className=" max-w-sm h-500">
+          <div className="flex justify-between mb-10">
+            <h1 className="font-semibold text-xl">Daily Activites</h1>
+            <button className="text-xl">
+              <BsThreeDots />
+            </button>
+          </div>
+          <div>
+            <img className="w-full bg-cover mb-8" src={product9} />
+            <h1 className="font-semibold">React 18 coming soon!</h1>
+            <div className="text-gray-400 text-sm mb-5">
+              <p className=" mb-6">By Johnathan Doe</p>
+              <p>
+                This will be the small description for the news you have shown
+                here. There could be some great info.
+              </p>
+            </div>
+          </div>
+          <button
+            className="px-3 py-2 rounded-lg hover:shadow-lg text-white h-fit"
+            style={{ backgroundColor: themeColor }}
+          >
+            Read More
+          </button>
         </Container>
       </div>
     </div>

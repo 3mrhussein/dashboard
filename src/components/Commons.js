@@ -18,7 +18,11 @@ export const TabItem = ({
     <div
       className={`${
         hoverIcon ? 'cursor-pointer hover:shadow-xl' : ''
-      } w-12 h-12 flex justify-center items-center   text-2xl rounded-xl ${extraStyles}`}
+      } w-12 h-12 flex justify-center items-center   text-2xl  ${
+        extraStyles.includes('rounded')
+          ? extraStyles
+          : `${extraStyles} rounded-xl`
+      }`}
       style={{
         color: IconColor ? IconColor : '',
         backgroundColor: BgColor ? BgColor : '',

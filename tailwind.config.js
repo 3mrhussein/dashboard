@@ -66,8 +66,10 @@ module.exports = {
         230: '230px',
 
         250: '250px',
+        450: '450px',
+        500: '500px',
         560: '560px',
-        600: '600px',
+        600: '580px',
       },
       minHeight: {
         590: '590px',
@@ -94,6 +96,7 @@ module.exports = {
       },
       maxWidth: {
         160: '160px',
+        md: '24rem',
       },
       backgroundImage: {
         'hero-pattern':
