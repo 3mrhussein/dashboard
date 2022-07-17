@@ -1,14 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { SiShopware } from 'react-icons/si';
 import { links } from '../data/dummy';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { TabsContext } from '../context/tabs.context';
 import { ThemeContext } from '../context/theme.context';
 const Sidebar = () => {
   const { showSidebar, setShowSidebar } = useContext(TabsContext);
-  const [active, setActive] = useState('ecommerce');
   const navigate = useNavigate();
+  const location = useLocation();
+  const [active, setActive] = useState(location.pathname.split('/')[1]);
   const {
     theme: { themeColor },
   } = useContext(ThemeContext);

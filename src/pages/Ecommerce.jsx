@@ -44,7 +44,7 @@ const Ecommerce = () => {
     theme: { themeColor, themeOption },
   } = useContext(ThemeContext);
   return (
-    <div className="px-3 gap-5 flex flex-col w-full justify-center items-center">
+    <div className="px-3 pt-5 gap-5 flex flex-col w-full justify-center items-center">
       <div className="flex flex-col lg:flex-row gap-5 w-full ">
         <Container
           className=" relative min-w-60 lg:w-3/12 h-40 flex-auto
@@ -209,10 +209,9 @@ const Ecommerce = () => {
             </div>
           </div>
           {recentTransactions.map((transaction, index) => (
-            <div className="flex justify-between">
+            <div key={index} className="flex justify-between">
               <TabItem
                 Icon={transaction.icon}
-                key={index}
                 Header={transaction.title}
                 Text={transaction.desc}
                 IconColor={transaction.iconColor}
@@ -316,7 +315,7 @@ const Ecommerce = () => {
             </button>
           </div>
           {weeklyStats.map((item, index) => (
-            <div className="flex justify-between items-center ">
+            <div key={index} className="flex justify-between items-center ">
               <TabItem
                 Icon={item.icon}
                 Header={item.title}
@@ -397,8 +396,9 @@ const Ecommerce = () => {
           <h1 className="font-semibold text-base py-3">Leaders</h1>
 
           <div className="flex border-b-1 pb-4 border-gray-300 gap-5 divide-gray-400">
-            {notifications.map((item) => (
+            {notifications.map((item, index) => (
               <img
+                key={index}
                 className="h-8 w-8 rounded-full"
                 src={item.user.proflieImg}
               />

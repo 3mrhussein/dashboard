@@ -10,6 +10,13 @@ import {
 import React from 'react';
 import { Container, PageContainer } from '../components/Commons.js';
 import { ordersData } from '../data/dummy.js';
+import { GoLocation } from 'react-icons/go';
+const gridLocation = (props) => (
+  <div className="flex gap-2 items-center">
+    <GoLocation />
+    <span>{props.Location}</span>
+  </div>
+);
 export const gridOrderImage = (props) => (
   <div>
     <img
@@ -102,6 +109,7 @@ const Orders = () => {
             allowEditing={false}
           />
           <ColumnDirective
+            template={gridLocation}
             width={'100px'}
             field="Location"
             textAlign="center"
