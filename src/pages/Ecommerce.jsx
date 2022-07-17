@@ -416,6 +416,7 @@ const Ecommerce = () => {
             </p>
           </div>
         </Container>
+        {/* Daily Activites */}
         <Container className=" max-w-sm h-500">
           <div className="flex justify-between mb-10">
             <h1 className="font-semibold text-xl">Daily Activites</h1>

@@ -42,9 +42,19 @@ export const TabItem = ({
 
 export const Container = ({ children, className, style }) => (
   <div
-    className={`${className} w-full rounded-xl bg-white dark:bg-secondary-dark-bg p-5 shadow-md`}
+    className={`${className} w-full rounded-2xl bg-white dark:bg-secondary-dark-bg p-5 shadow-md`}
     style={style}
   >
+    {children}
+  </div>
+);
+export const PageContainer = ({ children, className, style, Title }) => (
+  <div
+    className={`${className} w-full rounded-3xl text-black bg-white p-10 shadow-md`}
+    style={style}
+  >
+    <p className="text-gray-400">Page</p>
+    <h1 className="text-3xl font-bold mb-10">{Title}</h1>
     {children}
   </div>
 );

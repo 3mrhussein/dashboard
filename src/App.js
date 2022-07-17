@@ -3,11 +3,12 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Settings, Sidebar } from './components';
+import { Footer, Navbar, Settings, Sidebar } from './components';
 import { Ecommerce } from './pages';
 import { ThemeContext } from './context/theme.context';
 import { TabsContext } from './context/tabs.context';
 import { SparklineComponent } from '@syncfusion/ej2-react-charts';
+import Orders from './pages/Orders';
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
@@ -84,12 +85,14 @@ const App = () => {
               </div>
             )}
             <div className="w-full overflow-y-scroll">
-              <div className="w-full  max-w-7xl pl-3 mx-auto py-10 overflow-x-hidden ">
+              <div className="w-full  max-w-7xl px-3 mx-auto pt-10  ">
                 <Routes>
                   <Route exact path="/" element={<Ecommerce />} />
                   <Route exact path="/ecommerce" element={<Ecommerce />} />
+                  <Route exact path="/orders" element={<Orders />} />
                 </Routes>
               </div>
+              <Footer />
             </div>
           </div>
         </div>

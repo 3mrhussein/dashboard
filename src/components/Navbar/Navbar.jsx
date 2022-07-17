@@ -30,10 +30,7 @@ const Navbar = () => {
     theme: { themeOption, themeColor },
   } = useContext(ThemeContext);
   return (
-    <div
-      className="flex relative w-full justify-between items-center md:px-6 py-1 rounded-md "
-      style={{ backgroundColor: `rgba(10,10,10,0.2)` }}
-    >
+    <div className="flex relative w-full justify-between items-center md:px-6 py-1 rounded-md shadow-md ">
       {/* Left Part */}
       <div className="flex  justify-start items-center md:gap-2 ">
         <NavbarButton

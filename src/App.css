@@ -56,3 +56,13 @@
 .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
   border: none;
 }
+.e-grid {
+  border: none;
+}
+.e-grid .e-rowcell {
+  font-size: small;
+}
+.e-grid .e-gridpager {
+  font-family: 'Open Sans', sans-serif;
+  font-size: small;
+}
