@@ -54,7 +54,7 @@ export const PageContainer = ({ children, className, style, Title }) => (
     style={style}
   >
     <p className="text-gray-400">Page</p>
-    <h1 className="text-3xl font-bold mb-10">{Title}</h1>
+    <h1 className="text-3xl font-bold mb-3">{Title}</h1>
     {children}
   </div>
 );

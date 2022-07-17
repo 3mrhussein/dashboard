@@ -59,7 +59,7 @@ const Customers = () => {
         dataSource={customersData}
         editSettings={{ allowDeleting: true }}
         allowSorting
-        pageSettings={{ pageSize: 10 }}
+        pageSettings={{ pageSize: 6 }}
         allowPaging
         toolbar={['Delete']}
       >

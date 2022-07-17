@@ -11,6 +11,7 @@ import { SparklineComponent } from '@syncfusion/ej2-react-charts';
 import Orders from './pages/Orders';
 import Employees from './pages/Employees';
 import Customers from './pages/Customers';
+import Calendar from './pages/Calendar';
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
@@ -87,13 +88,14 @@ const App = () => {
               </div>
             )}
             <div className="w-full overflow-y-scroll">
-              <div className="w-full  max-w-7xl px-3 mx-auto pt-2  ">
+              <div className="w-full  max-w-7xl p-3 mx-auto   ">
                 <Routes>
                   <Route exact path="/" element={<Ecommerce />} />
                   <Route exact path="/ecommerce" element={<Ecommerce />} />
                   <Route exact path="/orders" element={<Orders />} />
                   <Route exact path="/employees" element={<Employees />} />
                   <Route exact path="/customers" element={<Customers />} />
+                  <Route exact path="/calendar" element={<Calendar />} />
                 </Routes>
               </div>
               <Footer />

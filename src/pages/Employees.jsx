@@ -36,7 +36,7 @@ const Employees = () => {
         dataSource={employeesData}
         allowSorting
         toolbar={['Search']}
-        pageSettings={{ pageSize: 10 }}
+        pageSettings={{ pageSize: 6 }}
         allowPaging
       >
         <ColumnsDirective>

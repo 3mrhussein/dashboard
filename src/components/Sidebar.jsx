@@ -41,6 +41,9 @@ const Sidebar = () => {
                 onClick={() => {
                   navigate(`/${link.name}`, { replace: 'true' });
                   setActive(link.name.toLowerCase());
+                  if (window.innerWidth <= 768) {
+                    setShowSidebar(false);
+                  }
                 }}
                 className="flex  text-base hover:bg-light-gray  dark:text-gray-200 dark:hover:text-gray-800 text-gray-800 items-center gap-3 w-full capitalize p-2 pl-7 my-3 rounded-lg"
                 style={{

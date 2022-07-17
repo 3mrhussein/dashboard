@@ -61,7 +61,7 @@ const Orders = () => {
         editSettings={{ allowEditing: true }}
         allowSorting={true}
         allowPaging={true}
-        pageSettings={{ pageSize: 10 }}
+        pageSettings={{ pageSize: 6 }}
         dataSource={ordersData}
         backgroundColor="transparent"
       >
