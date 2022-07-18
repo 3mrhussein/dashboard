@@ -4,17 +4,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Footer, Navbar, Settings, Sidebar } from './components';
-import { Ecommerce } from './pages';
+
 import { ThemeContext } from './context/theme.context';
 import { TabsContext } from './context/tabs.context';
 import { SparklineComponent } from '@syncfusion/ej2-react-charts';
-import Orders from './pages/Orders';
-import Employees from './pages/Employees';
-import Customers from './pages/Customers';
-import Calendar from './pages/Calendar';
-import Kanban from './pages/Kanban';
-import Editor from './pages/Editor';
-import ColorPicker from './pages/ColorPicker';
+import {
+  Bar,
+  Ecommerce,
+  Orders,
+  Employees,
+  Customers,
+  Calendar,
+  Kanban,
+  Editor,
+  ColorPicker,
+  Line,
+  Area,
+} from './pages';
+
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
@@ -102,6 +109,9 @@ const App = () => {
                   <Route exact path="/kanban" element={<Kanban />} />
                   <Route exact path="/editor" element={<Editor />} />
                   <Route exact path="/color-picker" element={<ColorPicker />} />
+                  <Route exact path="/line" element={<Line />} />
+                  <Route exact path="/area" element={<Area />} />
+                  <Route exact path="/bar" element={<Bar />} />
                 </Routes>
               </div>
               <Footer />

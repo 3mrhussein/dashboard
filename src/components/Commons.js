@@ -58,3 +58,21 @@ export const PageContainer = ({ children, className, style, Title }) => (
     {children}
   </div>
 );
+
+export const ChartPageContainer = ({
+  children,
+  className,
+  style,
+  Title,
+  Desc,
+}) => (
+  <div
+    className={`${className} w-full rounded-3xl text-black bg-white dark:bg-secondary-dark-bg dark:text-white p-10 shadow-md`}
+    style={style}
+  >
+    <p className="text-gray-400">Chart</p>
+    <h1 className="text-3xl font-bold mb-3">{Title}</h1>
+    <h1 className="text-2xl text-center font-semibold mb-3">{Desc}</h1>
+    {children}
+  </div>
+);
