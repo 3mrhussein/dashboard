@@ -12,6 +12,9 @@ import Orders from './pages/Orders';
 import Employees from './pages/Employees';
 import Customers from './pages/Customers';
 import Calendar from './pages/Calendar';
+import Kanban from './pages/Kanban';
+import Editor from './pages/Editor';
+import ColorPicker from './pages/ColorPicker';
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
@@ -96,6 +99,9 @@ const App = () => {
                   <Route exact path="/employees" element={<Employees />} />
                   <Route exact path="/customers" element={<Customers />} />
                   <Route exact path="/calendar" element={<Calendar />} />
+                  <Route exact path="/kanban" element={<Kanban />} />
+                  <Route exact path="/editor" element={<Editor />} />
+                  <Route exact path="/color-picker" element={<ColorPicker />} />
                 </Routes>
               </div>
               <Footer />

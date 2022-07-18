@@ -32,9 +32,9 @@
   background-color: transparent;
 }
 
-/* color-picker style  */
+/*color-picker style  */
 
-/* #preview {
+#preview {
   background: transparent
     url('https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png')
     no-repeat;
@@ -44,7 +44,7 @@
   min-width: 300px;
   max-width: 600px;
   background-color: #008000;
-} */
+}
 
 .e-input-group:not(.e-float-icon-left),
 .e-input-group.e-success:not(.e-float-icon-left),
