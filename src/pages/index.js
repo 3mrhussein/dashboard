@@ -9,3 +9,6 @@ export { default as Orders } from './Orders';
 export { default as Employees } from './Employees';
 export { default as Editor } from './Editor';
 export { default as Bar } from './Bar';
+export { default as Pie } from './Pie';
+export { default as Financial } from './Financial';
+export { default as Pyramid } from './Pyramid';

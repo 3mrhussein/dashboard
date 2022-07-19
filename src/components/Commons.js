@@ -76,3 +76,27 @@ export const ChartPageContainer = ({
     {children}
   </div>
 );
+
+export const CustomButton = ({
+  children,
+  TextColor,
+  BgColor,
+  className,
+  style,
+  Padding,
+  Rounded,
+  NoShadow,
+}) => (
+  <button
+    className={`${className} rounded-${Rounded ? Rounded : 'lg'} ${
+      NoShadow ? '' : 'hover:shadow-lg'
+    } text-white  h-fit align-middle text-center `}
+    style={
+      style
+        ? style
+        : { backgroundColor: BgColor, color: TextColor, padding: Padding }
+    }
+  >
+    {children}
+  </button>
+);

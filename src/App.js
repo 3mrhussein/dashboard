@@ -20,6 +20,9 @@ import {
   ColorPicker,
   Line,
   Area,
+  Financial,
+  Pie,
+  Pyramid,
 } from './pages';
 
 const App = () => {
@@ -51,7 +54,7 @@ const App = () => {
         <div className="  dark:bg-main-dark-bg h-full w-full flex">
           {/* Tools Button */}
 
-          <div className="fixed right-8  bottom-8 z-40 ">
+          <div className="fixed right-8  bottom-8 z-1000 ">
             <TooltipComponent content={'Settings'} position="Bottom-Left">
               <button
                 onClick={toggleSettings}
@@ -75,7 +78,7 @@ const App = () => {
           <div
             className={`  h-screen shadow-md ${
               showSidebar ? 'block' : 'hidden'
-            }   shadow-gray-500 fixed md:static flex bg-white dark:bg-secondary-dark-bg  z-1000`}
+            }   shadow-gray-500 fixed md:static flex bg-white dark:bg-secondary-dark-bg  z-40`}
             style={{ minWidth: '260px' }}
           >
             <Sidebar />
@@ -90,11 +93,13 @@ const App = () => {
 
             {/* Settings Menu */}
             {showSettings && (
-              <div
-                className=" fixed  w-72 h-3/4 overflow-scroll animate-slide-bottom-up  right-0 shadow-md rounded-2xl z-40 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
-                style={{ bottom: '15%' }}
-              >
-                <Settings />
+              <div className=" flex justify-end w-full h-screen  top-0 right-0 bg-half-transparent z-50 absolute  ">
+                <div
+                  className="  w-1/2 min-w-300  min-h-590 overflow-y-scroll animate-slide-bottom-up  m-auto shadow-md rounded-2xl z-1000 dark:text-white bg-white dark:shadow-gray-600 dark:bg-secondary-dark-bg "
+                  style={{ bottom: '15%' }}
+                >
+                  <Settings />
+                </div>
               </div>
             )}
             <div className="w-full overflow-y-scroll">
@@ -112,6 +117,9 @@ const App = () => {
                   <Route exact path="/line" element={<Line />} />
                   <Route exact path="/area" element={<Area />} />
                   <Route exact path="/bar" element={<Bar />} />
+                  <Route exact path="/pie" element={<Pie />} />
+                  <Route exact path="/financial" element={<Financial />} />
+                  <Route exact path="/pyramid" element={<Pyramid />} />
                 </Routes>
               </div>
               <Footer />

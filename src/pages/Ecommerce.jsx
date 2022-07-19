@@ -9,7 +9,7 @@ import {
   lineCustomSeries,
   weeklyStats,
   SparklineAreaData,
-  notifications,
+  medicalproBranding,
 } from '../data/dummy';
 import RevenueUpdates from '../components/Ecommerce/RevenueUpdates';
 import {
@@ -19,7 +19,6 @@ import {
   AccumulationSeriesCollectionDirective,
   AccumulationSeriesDirective,
   AccumulationTooltip,
-  Category,
   ChartComponent,
   DateTime,
   Legend,
@@ -36,8 +35,7 @@ import {
   SparklineTooltip,
 } from '@syncfusion/ej2-react-charts';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { Container, TabItem } from '../components/Commons';
-import { RiArrowGoBackFill } from 'react-icons/ri';
+import { Container, CustomButton, TabItem } from '../components/Commons';
 
 const Ecommerce = () => {
   const {
@@ -357,60 +355,57 @@ const Ecommerce = () => {
               <BsThreeDots />
             </button>
           </div>
-          <button
-            type="button"
-            className="text-xs px-1  text-gray-300  bg-orange-500 rounded-md hover:shadow-lg"
+          <CustomButton
+            BgColor={'#e72'}
+            Padding="2 8px"
+            TextColor={'#e3e4e3'}
+            className="text-xs rounded-md"
           >
             16 ARP, 2021
-          </button>
-          <div className="flex mt-2 border-b-1 border-gray-300 divide-gray-400">
-            <div className="py-2 text-xs  border-gray-200 border-r-1 pr-5">
-              <p className="text-gray-300">Due date</p>
-              <p>Oct 23, 2021</p>
-            </div>
-            <div className="py-2 text-xs  border-gray-200 border-r-1 px-5">
-              <p className="text-gray-300">Budget</p>
-              <p>$98,500</p>
-            </div>
-            <div className="py-2 text-xs  border-gray-200 border-r-1 px-5">
-              <p className="text-gray-300">Expense</p>
-              <p>$63,000</p>
-            </div>
+          </CustomButton>
+
+          <div className="flex mt-2 border-b-1 gap-5 border-gray-300 divide-gray-400">
+            {medicalproBranding.data.map((data, index) => (
+              <div
+                key={index}
+                className="py-2 text-xs border-gray-200 border-r-1 pr-5"
+              >
+                <p className="text-gray-400">{data.title}</p>
+                <p>{data.desc}</p>
+              </div>
+            ))}
           </div>
           <h1 className="font-semibold text-base py-3">Teams</h1>
 
           <div className="flex border-b-1 pb-4 border-gray-300 gap-5 divide-gray-400">
-            <button
-              type="button"
-              className="text-xs px-3  text-gray-100  bg-orange-400 rounded-md hover:shadow-lg"
-            >
-              Bootstrap
-            </button>
-            <button
-              type="button"
-              className="text-xs px-3  text-gray-100  bg-red-400 rounded-md hover:shadow-lg"
-            >
-              Angular
-            </button>
+            {medicalproBranding.teams.map((team, index) => (
+              <CustomButton
+                BgColor={team.color}
+                key={index}
+                Padding="2 8px"
+                TextColor={'#e3e4e3'}
+                className="text-xs rounded-md"
+              >
+                {team.name}
+              </CustomButton>
+            ))}
           </div>
           <h1 className="font-semibold text-base py-3">Leaders</h1>
 
           <div className="flex border-b-1 pb-4 border-gray-300 gap-5 divide-gray-400">
-            {notifications.map((item, index) => (
+            {medicalproBranding.leaders.map((item, index) => (
               <img
+                alt={'leader-img'}
                 key={index}
                 className="h-8 w-8 rounded-full"
-                src={item.user.proflieImg}
+                src={item.image}
               />
             ))}
           </div>
           <div className="p-3 flex justify-between">
-            <button
-              className="px-3 py-2 text-white rounded-lg h-fit"
-              style={{ backgroundColor: themeColor }}
-            >
+            <CustomButton BgColor={themeColor} Padding="8px 12px">
               Add
-            </button>
+            </CustomButton>
             <p className="text-gray-400 text-sm mt-2 mb-8">
               36 Recent Transactions
             </p>
@@ -425,7 +420,11 @@ const Ecommerce = () => {
             </button>
           </div>
           <div>
-            <img className="w-full bg-cover mb-8" src={product9} />
+            <img
+              alt="product-img"
+              className="w-full bg-cover mb-8"
+              src={product9}
+            />
             <h1 className="font-semibold">React 18 coming soon!</h1>
             <div className="text-gray-400 text-sm mb-5">
               <p className=" mb-6">By Johnathan Doe</p>
@@ -435,12 +434,9 @@ const Ecommerce = () => {
               </p>
             </div>
           </div>
-          <button
-            className="px-3 py-2 rounded-lg hover:shadow-lg text-white h-fit"
-            style={{ backgroundColor: themeColor }}
-          >
+          <CustomButton BgColor={themeColor} Padding="8px 12px">
             Read More
-          </button>
+          </CustomButton>
         </Container>
       </div>
     </div>
