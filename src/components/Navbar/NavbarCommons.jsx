@@ -39,8 +39,6 @@ export const NavbarButton = ({
           Shadow ? 'hover:shadow-xl' : ''
         } relative`}
       >
-        {console.log('rerendered')}
-
         {Unread ? UnreadMark : null}
         <Icon />
       </button>

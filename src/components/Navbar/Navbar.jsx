@@ -31,8 +31,6 @@ const Navbar = () => {
   } = useContext(ThemeContext);
   return (
     <div className="flex relative w-full justify-between items-center md:px-6 py-1 rounded-md shadow-md ">
-      {console.log('rerendered')}
-
       {/* Left Part */}
       <div className="flex  justify-start items-center md:gap-2 ">
         <NavbarButton
