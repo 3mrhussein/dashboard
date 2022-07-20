@@ -6,7 +6,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { TabsContext } from '../context/tabs.context';
 import { ThemeContext } from '../context/theme.context';
 const Sidebar = () => {
-  const { showSidebar, setShowSidebar } = useContext(TabsContext);
+  const { setShowSidebar } = useContext(TabsContext);
   const navigate = useNavigate();
   const location = useLocation();
   const [active, setActive] = useState(location.pathname.split('/')[1]);
@@ -18,7 +18,7 @@ const Sidebar = () => {
       {/* Logo */}
       <div className="flex font-bold items-center p-2 text-2xl gap-4">
         <SiShopware />
-        <span> Shoppy</span>
+        <span> Dashboard</span>
       </div>
 
       {/* Close Icon */}
@@ -35,26 +35,29 @@ const Sidebar = () => {
         {links.map((item) => (
           <div className=" w-full" key={item.title}>
             <h3 className="pl-2 uppercase">{item.title}</h3>
-            {item.links.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => {
-                  navigate(`/${link.name}`, { replace: 'true' });
-                  setActive(link.name.toLowerCase());
-                  if (window.innerWidth <= 768) {
-                    setShowSidebar(false);
-                  }
-                }}
-                className="flex  text-base hover:bg-light-gray  dark:text-gray-200 dark:hover:text-gray-800 text-gray-800 items-center gap-3 w-full capitalize p-2 pl-7 my-3 rounded-lg"
-                style={{
-                  backgroundColor:
-                    active === link.name.toLowerCase() && themeColor,
-                }}
-              >
-                {link.icon}
-                {link.name}
-              </button>
-            ))}
+            {item.links.map((link) => {
+              let isActive = active === link.name.toLowerCase();
+              return (
+                <button
+                  key={link.name}
+                  onClick={() => {
+                    navigate(`/${link.name}`, { replace: 'true' });
+                    setActive(link.name.toLowerCase());
+                    if (window.innerWidth <= 768) {
+                      setShowSidebar(false);
+                    }
+                  }}
+                  className="flex  text-base hover:bg-light-gray  dark:text-gray-200 dark:hover:text-gray-800 text-gray-800 items-center gap-3 w-full capitalize p-2 pl-7 my-3 rounded-lg"
+                  style={{
+                    backgroundColor: isActive && themeColor,
+                    color: isActive && 'white',
+                  }}
+                >
+                  {link.icon}
+                  {link.name}
+                </button>
+              );
+            })}
           </div>
         ))}
       </div>

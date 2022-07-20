@@ -19,6 +19,8 @@ const NavbarMessagesTab = ({ handleTabs }) => {
    
 `}
     >
+      {console.log('rerendered')}
+
       <NavbarTabHeader
         OnClick={handleTabs}
         ThemeColor={themeColor}

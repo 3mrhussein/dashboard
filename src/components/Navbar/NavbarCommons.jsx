@@ -39,6 +39,8 @@ export const NavbarButton = ({
           Shadow ? 'hover:shadow-xl' : ''
         } relative`}
       >
+        {console.log('rerendered')}
+
         {Unread ? UnreadMark : null}
         <Icon />
       </button>
@@ -62,25 +64,6 @@ export const NavbarTabHeader = ({ OnClick, ThemeColor, Header }) => {
     </div>
   );
 };
-
-// export const TabItem = ({ Text, Header, Icon, extraStyles, Img, Time }) => (
-//   <button
-//     type="button"
-//     className={`flex gap-4 w-full p-4 items-center border-b-1 dark:border-gray-700  border-gray-200`}
-//   >
-//     <div
-//       className={`w-12 h-12 flex justify-center items-center  text-2xl rounded-lg ${extraStyles}`}
-//     >
-//       {Img && <img src={Img} alt="user-image" className="rounded-full" />}{' '}
-//       {Icon && <Icon />}
-//     </div>
-//     <div className="flex flex-col items-start">
-//       <h3 className="text-lg">{Header}</h3>
-//       <p className="text-sm font-bold  text-gray-400">{Text}</p>
-//       {Time && <p className="text-xs  text-gray-400">{Time}</p>}
-//     </div>
-//   </button>
-// );
 
 export const CartItem = ({
   Img,

@@ -1,4 +1,4 @@
-const { linear } = require('@syncfusion/ej2/charts');
+// const { linear } = require('@syncfusion/ej2/charts');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

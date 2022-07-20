@@ -31,6 +31,8 @@ const Navbar = () => {
   } = useContext(ThemeContext);
   return (
     <div className="flex relative w-full justify-between items-center md:px-6 py-1 rounded-md shadow-md ">
+      {console.log('rerendered')}
+
       {/* Left Part */}
       <div className="flex  justify-start items-center md:gap-2 ">
         <NavbarButton
@@ -91,9 +93,10 @@ const Navbar = () => {
               src={ProfileImage}
               alt="profile-img"
             />
-            <h2 className="text-gray-400">
-              Hi, <span className=" font-bold">Amr Hussein</span>
-            </h2>
+            <h2 className="text-gray-400 hidden md:block">Hi, </h2>
+            <span className=" font-semibold text-gray-400 whitespace-nowrap">
+              Amr Hussein
+            </span>
             <MdKeyboardArrowDown />
           </button>
         </TooltipComponent>

@@ -7,7 +7,6 @@ import { Footer, Navbar, Settings, Sidebar } from './components';
 
 import { ThemeContext } from './context/theme.context';
 import { TabsContext } from './context/tabs.context';
-import { SparklineComponent } from '@syncfusion/ej2-react-charts';
 import {
   Bar,
   Ecommerce,
@@ -27,7 +26,7 @@ import {
 
 const App = () => {
   const [settingsEffect, setSettingsEffect] = useState(false);
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const { showSidebar, setShowSettings, showSettings, setShowSidebar } =
     useContext(TabsContext);
   const toggleSettings = (e) => {
@@ -49,7 +48,7 @@ const App = () => {
     }
   }, []);
   return (
-    <div className=" w-screen  h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
+    <div className=" w-screen h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
       <BrowserRouter>
         <div className="  dark:bg-main-dark-bg h-full w-full flex">
           {/* Tools Button */}

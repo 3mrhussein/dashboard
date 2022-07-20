@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { ThemeContext } from '../../context/theme.context';
 import {
@@ -13,8 +13,6 @@ import {
   Tooltip,
   DataLabel,
   StackingColumnSeries,
-  MajorGridLines,
-  MinorGridLines,
 } from '@syncfusion/ej2-react-charts';
 import { Container } from '../Commons';
 const RevenueUpdates = () => {
@@ -169,10 +167,6 @@ const RevenueUpdates = () => {
                     { x: 'May', y: 159.9 },
                     { x: 'Jun', y: 159.9 },
                     { x: 'July', y: 159.9 },
-                    // { x: 'Aug', y: 159.9 },
-                    // { x: 'Oct', y: 159.9 },
-                    // { x: 'Nov', y: 159.9 },
-                    // { x: 'Dec', y: 159.9 },
                   ]}
                   type={'StackingColumn'}
                   // stackingGroup={'a'}

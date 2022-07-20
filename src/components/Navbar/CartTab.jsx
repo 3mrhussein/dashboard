@@ -16,7 +16,7 @@ const NavbarCartTab = ({ handleTabs }) => {
   };
 
   const {
-    theme: { themeOption, themeColor },
+    theme: { themeColor },
   } = useContext(ThemeContext);
 
   return (
@@ -24,6 +24,8 @@ const NavbarCartTab = ({ handleTabs }) => {
       <div
         className={`${TabDefaultClasses} z-1000 h-full gap-2 rounded-r-none`}
       >
+        {console.log('rerendered')}
+
         <NavbarTabHeader
           OnClick={handleTabs}
           ThemeColor={themeColor}

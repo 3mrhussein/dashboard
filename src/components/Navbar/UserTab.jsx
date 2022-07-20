@@ -5,7 +5,7 @@ import { ThemeContext } from '../../context/theme.context';
 import { NavbarTabHeader, TabDefaultClasses } from './NavbarCommons';
 import { TabItem } from '../Commons';
 
-const buttonStyles = `flex gap-4 w-full p-4 items-center border-b-1 dark:border-gray-700  border-gray-200`;
+// const buttonStyles = `flex gap-4 w-full p-4 items-center border-b-1 dark:border-gray-700  border-gray-200`;
 
 const UserTab = ({ handleTabs }) => {
   const { theme } = useContext(ThemeContext);
@@ -22,6 +22,7 @@ const UserTab = ({ handleTabs }) => {
        sm:w-96 top-16  md:right-8 z-50 
     `}
     >
+
       <NavbarTabHeader
         OnClick={handleTabs}
         Header="User Profile"

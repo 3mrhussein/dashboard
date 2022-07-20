@@ -6,10 +6,8 @@ import {
   SeriesDirective,
   Inject,
   HiloSeries,
-  Category,
   DateTime,
   Tooltip,
-  Zoom,
   Crosshair,
 } from '@syncfusion/ej2-react-charts';
 import { financialChartData } from '../data/dummy';

@@ -21,7 +21,6 @@ const Kanban = () => {
             {props.keyField}
           </div>
         );
-        break;
       case 'InProgress':
         return (
           <div className="flex gap-2 font-thin text-lg items-center">
@@ -31,7 +30,6 @@ const Kanban = () => {
             {props.keyField}
           </div>
         );
-        break;
 
       case 'Testing':
         return (
@@ -42,7 +40,6 @@ const Kanban = () => {
             {props.keyField}
           </div>
         );
-        break;
       default:
         return (
           <div className="flex gap-2 font-thin text-lg  items-center">

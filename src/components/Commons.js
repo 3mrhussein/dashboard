@@ -28,7 +28,7 @@ export const TabItem = ({
         backgroundColor: BgColor ? BgColor : '',
       }}
     >
-      {Img && <img src={Img} alt="user-image" className="rounded-full" />}
+      {Img && <img src={Img} alt="user" className="rounded-full" />}
 
       {Icon && Icon}
     </div>
@@ -50,11 +50,11 @@ export const Container = ({ children, className, style }) => (
 );
 export const PageContainer = ({ children, className, style, Title }) => (
   <div
-    className={`${className} w-full rounded-3xl text-black bg-white p-10 shadow-md`}
+    className={`${className} w-full rounded-3xl text-black bg-white p-2 sm:p-10 shadow-md`}
     style={style}
   >
-    <p className="text-gray-400">Page</p>
-    <h1 className="text-3xl font-bold mb-3">{Title}</h1>
+    <p className="text-gray-400 pl-2">Page</p>
+    <h1 className="text-3xl font-bold mb-3 pl-2">{Title}</h1>
     {children}
   </div>
 );
@@ -67,11 +67,11 @@ export const ChartPageContainer = ({
   Desc,
 }) => (
   <div
-    className={`${className} w-full rounded-3xl text-black bg-white dark:bg-secondary-dark-bg dark:text-white p-10 shadow-md`}
+    className={`${className} w-full rounded-3xl text-black bg-white dark:bg-secondary-dark-bg dark:text-white p-2 sm:p-10 shadow-md`}
     style={style}
   >
-    <p className="text-gray-400">Chart</p>
-    <h1 className="text-3xl font-bold mb-3">{Title}</h1>
+    <p className="text-gray-400 pl-2">Chart</p>
+    <h1 className="text-3xl font-bold mb-3 pl-2">{Title}</h1>
     <h1 className="text-2xl text-center font-semibold mb-3">{Desc}</h1>
     {children}
   </div>

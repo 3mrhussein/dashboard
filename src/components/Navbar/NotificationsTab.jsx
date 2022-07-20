@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/theme.context';
-import { user1, user2, user3, user4 } from '../../data/dummy';
 import { NavbarTabHeader, TabDefaultClasses } from './NavbarCommons';
 import { TabItem } from '../Commons';
 
 import { notifications } from '../../data/dummy';
 const NavbarNotificationsTab = ({ handleTabs }) => {
   const {
-    theme: { themeOption, themeColor },
+    theme: { themeColor },
   } = useContext(ThemeContext);
 
   function switchNotification(notification) {
@@ -40,6 +39,8 @@ const NavbarNotificationsTab = ({ handleTabs }) => {
    sm:w-96 top-16  sm:right-20 z-50 ${TabDefaultClasses}
 `}
     >
+      {console.log('rerendered')}
+
       <NavbarTabHeader
         OnClick={handleTabs}
         ThemeColor={themeColor}

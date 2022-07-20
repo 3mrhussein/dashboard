@@ -46,7 +46,7 @@ const Ecommerce = () => {
       <div className="flex flex-col lg:flex-row gap-5 w-full ">
         <Container
           className=" relative min-w-60 lg:w-3/12 h-40 flex-auto
-       bg-cover bg-no-repeat bg-hero-pattern bg-no-repeat bg-center"
+       bg-cover bg-no-repeat bg-hero-pattern bg-center"
         >
           <p className=" font-bold text-gray-400">Earnings</p>
           <h1 className="text-2xl dark:text-white font-semibold">$63,448.78</h1>

@@ -8,7 +8,7 @@ import {
   Edit,
 } from '@syncfusion/ej2-react-grids/index.js';
 import React from 'react';
-import { Container, PageContainer } from '../components/Commons.js';
+import { PageContainer } from '../components/Commons.js';
 import { ordersData } from '../data/dummy.js';
 import { GoLocation } from 'react-icons/go';
 const gridLocation = (props) => (
