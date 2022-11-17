@@ -83,6 +83,7 @@ const RevenueUpdates = () => {
                 tooltipSettings={{
                   visible: true,
                   fill: themeColor,
+                  // eslint-disable-next-line no-template-curly-in-string
                   format: '${x} : data ${yval}',
                   trackLineSettings: { visible: true },
                 }}

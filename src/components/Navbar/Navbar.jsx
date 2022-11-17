@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FiSearch, FiShoppingCart, FiMessageSquare } from 'react-icons/fi';
-import { RiArrowGoBackFill, RiNotification3Line } from 'react-icons/ri';
+import { RiNotification3Line } from 'react-icons/ri';
 import { TabsContext } from '../../context/tabs.context';
 import UserTab from './UserTab';
 import { NavbarButton } from './NavbarCommons';
@@ -27,7 +27,7 @@ const Navbar = () => {
     } else setDisplayedTab(e.currentTarget.value);
   };
   const {
-    theme: { themeOption, themeColor },
+    theme: { themeColor },
   } = useContext(ThemeContext);
   return (
     <div className="flex relative w-full justify-between items-center md:px-6 py-1 rounded-md shadow-md ">

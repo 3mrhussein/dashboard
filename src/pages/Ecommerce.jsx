@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/theme.context';
 import { BsCurrencyDollar, BsThreeDots } from 'react-icons/bs';

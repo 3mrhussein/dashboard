@@ -46,7 +46,7 @@ const App = () => {
     if (window.innerWidth <= 768) {
       setShowSidebar(false);
     }
-  }, []);
+  }, [setShowSidebar]);
   return (
     <div className=" w-screen h-screen dark:text-gray-100 bg-main-bg dark:bg-main-dark-bg">
       <div className="  dark:bg-main-dark-bg h-full w-full flex">
@@ -103,7 +103,7 @@ const App = () => {
                   exact
                   path="/"
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Ecommerce />
                     </Suspense>
                   }
@@ -113,7 +113,7 @@ const App = () => {
                   exact
                   path="/ecommerce"
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Ecommerce />
                     </Suspense>
                   }
@@ -122,7 +122,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Orders />
                     </Suspense>
                   }
@@ -132,7 +132,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Employees />
                     </Suspense>
                   }
@@ -142,7 +142,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Customers />
                     </Suspense>
                   }
@@ -152,7 +152,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Calendar />
                     </Suspense>
                   }
@@ -162,7 +162,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Kanban />
                     </Suspense>
                   }
@@ -172,7 +172,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Editor />
                     </Suspense>
                   }
@@ -182,7 +182,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <ColorPicker />
                     </Suspense>
                   }
@@ -192,7 +192,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Line />
                     </Suspense>
                   }
@@ -202,7 +202,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Area />
                     </Suspense>
                   }
@@ -212,7 +212,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Bar />
                     </Suspense>
                   }
@@ -222,7 +222,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Pie />
                     </Suspense>
                   }
@@ -232,7 +232,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Financial />
                     </Suspense>
                   }
@@ -242,7 +242,7 @@ const App = () => {
                 <Route
                   exact
                   element={
-                    <Suspense fallback={Spinner}>
+                    <Suspense fallback={<Spinner Loading />}>
                       <Pyramid />
                     </Suspense>
                   }
