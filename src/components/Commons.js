@@ -1,3 +1,4 @@
+import { useState } from 'react';
 export const TabItem = ({
   IconColor,
   Text,
@@ -99,4 +100,19 @@ export const CustomButton = ({
   >
     {children}
   </button>
+);
+
+export const QueueContainer = ({ data, borderColor }) => (
+  <div className="relative flex items-center ml-5 h-20  ">
+    {data.map((item, index) => (
+      <button
+        className="overflow-hidden  inline-block  hover:z-10 hover:w-20 hover:h-20   -ml-3 bg-black  w-12 h-12  rounded-full  border-2 "
+        style={{ borderColor: borderColor }}
+        key={index}
+        title={'Hello'}
+      >
+        <img src={item.image} alt="anything w-full h-full" />
+      </button>
+    ))}
+  </div>
 );

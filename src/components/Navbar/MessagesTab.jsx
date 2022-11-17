@@ -15,12 +15,10 @@ const NavbarMessagesTab = ({ handleTabs }) => {
     <div
       className={`
       ${TabDefaultClasses}
-    top-16 sm:right-24 z-50 absolute
    
+      top-16 sm:right-24 z-50 absolute
 `}
     >
-      {console.log('rerendered')}
-
       <NavbarTabHeader
         OnClick={handleTabs}
         ThemeColor={themeColor}

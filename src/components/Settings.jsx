@@ -74,7 +74,7 @@ const Settings = () => {
       </div>
       {/* Theme Colors */}
 
-      <div className={`${sectionDivClassName}`}>
+      <div className={`${sectionDivClassName} border-none mb-10`}>
         <h2 className="text-xl font-bold py-4">Theme Option</h2>
         <div className="flex items-center gap-4  flex-wrap">
           {themeColors.map((color) => (

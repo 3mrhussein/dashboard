@@ -35,7 +35,12 @@ import {
   SparklineTooltip,
 } from '@syncfusion/ej2-react-charts';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { Container, CustomButton, TabItem } from '../components/Commons';
+import {
+  Container,
+  CustomButton,
+  QueueContainer,
+  TabItem,
+} from '../components/Commons';
 
 const Ecommerce = () => {
   const {
@@ -56,12 +61,14 @@ const Ecommerce = () => {
           >
             <BsCurrencyDollar />
           </button>
-          <button
-            className="text-center p-3 mt-5 rounded-lg text-white shadow-sm hover:shadow-lg"
-            style={{ backgroundColor: themeColor }}
+          <CustomButton
+            BgColor={themeColor}
+            Padding={'8px 12px'}
+            className="mt-5"
+            Rounded="lg"
           >
             Download
-          </button>
+          </CustomButton>
         </Container>
         <div className="flex flex-wrap justify-center gap-1 max-w-4xl">
           {earningData.map((item) => (
@@ -225,12 +232,10 @@ const Ecommerce = () => {
             </div>
           ))}
           <div className="p-3 flex justify-between">
-            <button
-              className="p-3 rounded-lg text-white h-fit"
-              style={{ backgroundColor: themeColor }}
-            >
+            <CustomButton BgColor={themeColor} Padding="8px 12px">
               Add
-            </button>
+            </CustomButton>
+
             <p className="text-gray-400 text-sm mt-2">36 Recent Transactions</p>
           </div>
         </Container>
@@ -357,7 +362,7 @@ const Ecommerce = () => {
           </div>
           <CustomButton
             BgColor={'#e72'}
-            Padding="2 8px"
+            Padding="1px 8px"
             TextColor={'#e3e4e3'}
             className="text-xs rounded-md"
           >
@@ -382,7 +387,7 @@ const Ecommerce = () => {
               <CustomButton
                 BgColor={team.color}
                 key={index}
-                Padding="2 8px"
+                Padding="1px 8px"
                 TextColor={'#e3e4e3'}
                 className="text-xs rounded-md"
               >
@@ -392,17 +397,22 @@ const Ecommerce = () => {
           </div>
           <h1 className="font-semibold text-base py-3">Leaders</h1>
 
-          <div className="flex border-b-1 pb-4 border-gray-300 gap-5 divide-gray-400">
+          {/* <div className=" realative pl-10 border-b-1 pb-4 ">
             {medicalproBranding.leaders.map((item, index) => (
               <img
                 alt={'leader-img'}
                 key={index}
-                className="h-8 w-8 rounded-full"
+                className="inline-block border-2 object-cover h-16 w-16 rounded-full"
                 src={item.image}
+                style={{ marginLeft: -30, borderColor: themeColor }}
               />
             ))}
-          </div>
-          <div className="p-3 flex justify-between">
+          </div> */}
+          <QueueContainer
+            data={medicalproBranding.leaders}
+            borderColor={themeColor}
+          />
+          <div className="p-3  flex justify-between">
             <CustomButton BgColor={themeColor} Padding="8px 12px">
               Add
             </CustomButton>
@@ -424,6 +434,7 @@ const Ecommerce = () => {
               alt="product-img"
               className="w-full bg-cover mb-8"
               src={product9}
+              loading="lazy"
             />
             <h1 className="font-semibold">React 18 coming soon!</h1>
             <div className="text-gray-400 text-sm mb-5">

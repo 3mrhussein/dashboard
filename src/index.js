@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from './App.js';
 import TabsProvider from './context/tabs.context.js';
@@ -10,7 +11,9 @@ const root = createRoot(container);
 root.render(
   <ThemeProvider>
     <TabsProvider>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </TabsProvider>
   </ThemeProvider>
 );

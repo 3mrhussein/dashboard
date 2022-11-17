@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { ThemeContext } from '../../context/theme.context';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';

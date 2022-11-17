@@ -14,7 +14,7 @@ import {
   DataLabel,
   StackingColumnSeries,
 } from '@syncfusion/ej2-react-charts';
-import { Container } from '../Commons';
+import { Container, CustomButton } from '../Commons';
 const RevenueUpdates = () => {
   const {
     theme: { themeColor },
@@ -97,13 +97,10 @@ const RevenueUpdates = () => {
                 <Inject services={[SparklineTooltip]} />
               </SparklineComponent>
             </div>
-            <button
-              style={{ backgroundColor: themeColor }}
-              type="button"
-              className="py-3 px-2 hover:shadow-lg shadow-gray-500 text-white rounded-lg mt-5 w-fit "
-            >
+
+            <CustomButton BgColor={themeColor} Padding="8px 12px">
               Download Report
-            </button>
+            </CustomButton>
           </div>
         </div>
         <div className=" w-full md:w-1/2 flex justify-center  ">

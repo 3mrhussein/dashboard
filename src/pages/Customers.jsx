@@ -18,6 +18,7 @@ const gridCustomer = (props) => (
       className="w-10 h-10 rounded-full"
       alt={`employee ${props.CustomerID}`}
       src={props.CustomerImage}
+      loading="lazy"
     />
     <div className="flex flex-col gap-1">
       <span>{props.CustomerName}</span>
