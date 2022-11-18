@@ -107,7 +107,6 @@ const App = () => {
                     </Suspense>
                   }
                 />
-
                 <Route
                   exact
                   path="/ecommerce"
