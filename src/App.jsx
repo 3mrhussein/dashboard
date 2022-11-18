@@ -84,7 +84,6 @@ const App = () => {
 
         <div className="flex flex-col w-full overflow-x-hidden  ">
           <Navbar />
-
           {/* Settings Menu */}
           {showSettings && (
             <div className=" flex justify-end w-full h-screen  top-0 right-0 bg-half-transparent z-50 absolute  ">
