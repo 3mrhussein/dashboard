@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Project Overview
+This project is a demo dashboard built with [Create React App](https://create-react-app.dev/), designed to be mobile responsive and user-friendly. The dashboard includes various types of charts created with [Syncfusion](https://www.syncfusion.com/), a powerful suite of React components. In addition, the project uses [React Router](https://reactrouter.com/) for client-side routing, [TailwindCSS](https://tailwindcss.com/) for styling, and [React Icons](https://react-icons.github.io/) for icons.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The dashboard features a kanban board, text editor, and color picker. It was built as a personal portfolio project to showcase my skills and is intended to be used as a reference for future projects.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with the project, clone the repository and install the dependencies:
 
-### `npm start`
+`git clone https://github.com/<your-username>/<repo-name>.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`cd <repo-name>`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm install`
 
-### `npm test`
+Then, you can start the development server by running:
+`npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will start the development server on [http://localhost:3000](http://localhost:3000) and you can view the project in your browser.
 
-### `npm run build`
+## Built With
+- [Create React App](https://create-react-app.dev/)
+- [Syncfusion](https://www.syncfusion.com/)
+- [React Router](https://reactrouter.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Icons](https://react-icons.github.io/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live Link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can view the live version of the dashboard at [https://amr-dashboard.netlify.app/](https://amr-dashboard.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://user-images.githubusercontent.com/34787413/213035880-b8bb8cbf-61d6-4906-918c-554f2388b4ec.png" alt="Dashboard Screenshot" style="width: 50%;">
+<img src="https://user-images.githubusercontent.com/34787413/213036659-949cad5f-42aa-4e4f-8a46-48a20f3383f6.png" alt="Calender Screenshot" style="width: 50%;">
+<img src="https://user-images.githubusercontent.com/34787413/213037080-156a70aa-7259-4331-8764-e9423cbd0762.png" alt="Kanban Board  Screensho" style="width: 50%;">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Note
 
-## Learn More
+This is a demo project, it is not intended to be used in production.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
