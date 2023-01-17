@@ -25,10 +25,6 @@ This will start the development server on [http://localhost:3000](http://localho
 - [TailwindCSS](https://tailwindcss.com/)
 - [React Icons](https://react-icons.github.io/)
 
-## Live Link
-
-You can view the live version of the dashboard at [https://amr-dashboard.netlify.app/](https://amr-dashboard.netlify.app/)
-
 
 ## Screenshots
 
@@ -37,6 +33,10 @@ You can view the live version of the dashboard at [https://amr-dashboard.netlify
 <img src="https://user-images.githubusercontent.com/34787413/213036659-949cad5f-42aa-4e4f-8a46-48a20f3383f6.png" alt="Calender Screenshot" style="width: 50%;">
 <img src="https://user-images.githubusercontent.com/34787413/213037080-156a70aa-7259-4331-8764-e9423cbd0762.png" alt="Kanban Board  Screensho" style="width: 50%;">
 
+
+## Live Link
+
+You can view the live version of the dashboard at [https://amr-dashboard.netlify.app/](https://amr-dashboard.netlify.app/)
 
 ## Note
 
