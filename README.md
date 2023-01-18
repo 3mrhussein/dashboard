@@ -29,9 +29,9 @@ This will start the development server on [http://localhost:3000](http://localho
 ## Screenshots
 
 
-<img src="https://user-images.githubusercontent.com/34787413/213035880-b8bb8cbf-61d6-4906-918c-554f2388b4ec.png" alt="Dashboard Screenshot" style="width: 50%;">
-<img src="https://user-images.githubusercontent.com/34787413/213036659-949cad5f-42aa-4e4f-8a46-48a20f3383f6.png" alt="Calender Screenshot" style="width: 50%;">
-<img src="https://user-images.githubusercontent.com/34787413/213037080-156a70aa-7259-4331-8764-e9423cbd0762.png" alt="Kanban Board  Screensho" style="width: 50%;">
+<img src="https://user-images.githubusercontent.com/34787413/213035880-b8bb8cbf-61d6-4906-918c-554f2388b4ec.png" alt="Dashboard Screenshot" style="width: 80%;">
+<img src="https://user-images.githubusercontent.com/34787413/213036659-949cad5f-42aa-4e4f-8a46-48a20f3383f6.png" alt="Calender Screenshot" style="width: 80%;">
+<img src="https://user-images.githubusercontent.com/34787413/213037080-156a70aa-7259-4331-8764-e9423cbd0762.png" alt="Kanban Board  Screensho" style="width: 80%;">
 
 
 ## Live Link
